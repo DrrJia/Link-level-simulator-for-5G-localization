@@ -6,6 +6,9 @@ clear all;
 clc;
 rng('default');
 data.LocErrall = [];
+%
+% please set ULA array at BS for this simulation, as 1D-angle-based positioning considered.
+%
 [sysPar, carrier, BeamSweep, Layout, RFI, PE, Chan] = lk.gen_sysconfig_pos;
 % generate wireless channel information
 [data.CIR_cell, data.hcoef, data.Hinfo] = lk.gen_channelcoeff(sysPar, ...
